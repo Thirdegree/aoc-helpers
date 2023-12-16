@@ -93,7 +93,7 @@ fn impl_useful_functs(struct_ident: Ident, elems_type: Ident) -> proc_macro2::To
                 self.elems.len()
             }
             pub fn x_len(&self) -> usize {
-                self.elems.len()
+                self[0].len()
             }
             pub fn is_within_bounds(&self, pos: (usize, usize)) -> bool {
                 // no need to check > 0 because usize
