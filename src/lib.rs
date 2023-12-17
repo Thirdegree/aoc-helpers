@@ -86,7 +86,7 @@ fn find_contained_elem_type(ty: &syn::Type) -> Option<syn::Ident> {
     Some(segments[0].ident.clone())
 }
 
-fn impl_useful_functs(struct_ident: Ident, elems_type: Ident) -> proc_macro2::TokenStream {
+fn impl_useful_functs(struct_ident: Ident, _elems_type: Ident) -> proc_macro2::TokenStream {
     quote! {
         impl #struct_ident {
             pub fn y_len(&self) -> usize {
